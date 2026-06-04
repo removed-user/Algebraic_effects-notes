@@ -20,26 +20,6 @@ They act like an advanced version of `try/catch` blocks where, after an exceptio
 | **Control Flow** | Terminates the call stack | Pauses and resumes the stack |
 | **Continuations** | Destroyed immediately | Captured and executable |
 
-## Code Example (Conceptual JavaScript)
-
-Imagine a scenario where a deeply nested function needs to fetch a user's name:
-
-```javascript
-// 1. Define a function that "performs" an effect
-function greetUser() {
-  const name = perform AskName(); // Pauses execution here
-  return `Hello, ${name}!`;        // Resumes here later
-}
-
-// 2. Handle the effect at the top level
-try {
-  console.log(greetUser());
-} handle (effect, resume) {
-  if (effect === AskName) {
-    resume("Alice"); // Sends "Alice" back into the function
-  }
-}
-```
 
 ## Key Benefits
 

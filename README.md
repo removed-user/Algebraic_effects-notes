@@ -5,7 +5,8 @@
 They act like an advanced version of `try/catch` blocks where, after an exception is "caught" and processed, the program can **resume execution exactly where it left off**.
 
 ## Core Concepts
-#### **Effects**: Abstract declarations of what a program wants to do (e.g., `perform AskName`).
+#### **Effects**: 
+Abstract declarations of what a program wants to do (e.g., `perform AskName`).
 **Handlers**: Code blocks that intercept the effect and decide how to fulfill it.
 **Continuations**: Captures the remaining execution path, allowing handlers to return a value back to the call site.
 
